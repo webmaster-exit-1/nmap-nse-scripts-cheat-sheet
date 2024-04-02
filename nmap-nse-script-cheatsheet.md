@@ -1,18 +1,27 @@
+**NMap NSE Scripts Cheat Sheet**
+
+============================
+
+This **NMAP NSE SCRIPTS CHEATSHEET** was created to show the correct usage for each of the official nmap nse scripts.
+
 afp-ls.nse
 
 ```bash
 nmap -p 548 --script afp-ls --script-args afp-ls.timeout=4s,afp-ls.max-retries=3 <target>
 ```
+
 afp-path-vuln.nse
 
 ```bash
 nmap -p 548 --script afp-path-vuln --script-args afp-path-vuln.timeout=4s,afp-path-vuln.max-retries=3 <target>
 ```
+
 Afp-serverinfo.nse
 
 ```bash
 nmap -p 548 --script afp-serverinfo --script-args afp-serverinfo.timeout=4s,afp-serverinfo.max-retries=3 <target>
 ```
+
 afp-showmount.nse
 
 ```bash
