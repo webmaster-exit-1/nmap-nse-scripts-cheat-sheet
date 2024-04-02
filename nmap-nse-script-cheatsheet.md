@@ -1,6 +1,6 @@
 **NMap NSE Scripts Cheat Sheet**
 
-# ============================
+# --------
 
 This **NMAP NSE SCRIPTS CHEATSHEET** was created to show the correct usage for each of the official nmap nse scripts.
 
