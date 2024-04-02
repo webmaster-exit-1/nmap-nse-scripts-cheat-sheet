@@ -1,2 +1,2 @@
-# nmap-nse-scripts-cheatsheet
-An NMap NSE Cheatsheet To show the correct usage Per NSE script that ships with NMap
+# NMAP NSE SCRIPTS CHEAT SHEET
+An NMap NSE Scripts Cheat Sheet to show the correct usage per nse script that ships with the Official NMap software.
