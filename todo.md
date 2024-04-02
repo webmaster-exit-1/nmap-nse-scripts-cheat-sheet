@@ -1,3 +1,1 @@
-Finished scripts starting with A - E.
-
-Continue from F to Z.
+Finished scripts starting after omp2-enum-targets.nse
