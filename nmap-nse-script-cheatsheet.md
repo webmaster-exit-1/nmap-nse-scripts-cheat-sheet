@@ -18,7 +18,7 @@ afp-path-vuln.nse
 nmap -p 548 --script afp-path-vuln --script-args afp-path-vuln.timeout=4s,afp-path-vuln.max-retries=3 <target>
 ```
 
-Afp-serverinfo.nse
+afp-serverinfo.nse
 
 ```bash
 nmap -p 548 --script afp-serverinfo --script-args afp-serverinfo.timeout=4s,afp-serverinfo.max-retries=3 <target>
