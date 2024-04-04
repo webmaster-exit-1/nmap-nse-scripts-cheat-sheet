@@ -2721,3 +2721,497 @@ rpcap-brute.nse
 nmap -p 161 --script rpcap-brute --script-args rpcap.userdb=<user-file>,rpcap.passdb=<password-file>,rpcap.timeout=5 <target>
 ```
 
+rpcap-info.nse
+
+```bash
+nmap --script rpcap-info <target>
+```
+
+rpcinfo.nse
+
+```bash
+nmap --script rpcinfo <target>
+```
+
+rsa-vuln-roca.nse
+
+```bash
+nmap --script rsa-vuln-roca <target>
+```
+
+rsync-brute.nse
+
+```bash
+nmap -p 873 --script rsync-brute --script-args rsync.passdb="<password-file>" <target>
+```
+
+rsync-list-modules.nse
+
+```bash
+nmap -p 873 --script rsync-list-modules <target>
+```
+
+rtsp-methods.nse
+
+```bash
+nmap -p 554 --script rtsp-methods <target>
+```
+
+rtsp-url-brute.nse
+
+```bash
+nmap -p 554 --script rtsp-url-brute --script-args rtsp-url-brute.urlfile="<url-file>" <target>
+```
+
+rusers.nse
+
+```bash
+nmap --script rusers <target>
+```
+
+s7-info.nse
+
+```bash
+nmap -p 102 --script s7-info <target>
+```
+
+samba-vuln-cve-2012-1182.nse
+
+```bash
+nmap -p 445 --script samba-vuln-cve-2012-1182 <target>
+```
+
+servicetags.nse
+
+```bash
+nmap --script servicetags <target>
+```
+
+shodan-api.nse
+
+```bash
+nmap --script shodan-api --script-args shodan.apikey=<API-key> <target>
+```
+
+sip-brute.nse
+
+```bash
+nmap -p 5060 --script sip-brute --script-args sip.userdb=<user-file>,sip.passdb=<password-file>,sip.timeout=5 <target>
+```
+
+sip-call-spoof.nse
+
+```bash
+nmap -p 5060 --script sip-call-spoof --script-args sip.from=<caller-number>,sip.to=<callee-number> <target>
+```
+
+sip-enum-users.nse
+
+```bash
+nmap -p 5060 --script sip-enum-users --script-args sip.userdb=<user-file> <target>
+```
+
+sip-methods.nse
+
+```bash
+nmap -p 5060 --script sip-methods <target>
+```
+
+skypev2-version.nse
+
+```bash
+nmap -p 443 --script skypev2-version <target>
+```
+
+smb-brute.nse
+
+```bash
+nmap -p 139,445 --script smb-brute --script-args smb.passdb="<password-file>" <target>
+```
+
+smb-double-pulsar-backdoor.nse
+
+```bash
+nmap -p 139,445 --script smb-double-pulsar-backdoor <target>
+```
+
+smb-enum-domains.nse
+
+```bash
+nmap -p 139,445 --script smb-enum-domains <target>
+```
+
+smb-enum-groups.nse
+
+```bash
+nmap -p 139,445 --script smb-enum-groups <target>
+```
+
+smb-enum-processes.nse
+
+```bash
+nmap -p 139,445 --script smb-enum-processes <target>
+```
+
+smb-enum-services.nse
+
+```bash
+nmap -p 139,445 --script smb-enum-services <target>
+```
+
+smb-enum-sessions.nse
+
+```bash
+nmap -p 139,445 --script smb-enum-sessions <target>
+```
+
+smb-enum-shares.nse
+
+```bash
+nmap -p 139,445 --script smb-enum-shares <target>
+```
+
+smb-enum-users.nse
+
+```bash
+nmap -p 139,445 --script smb-enum-users <target>
+```
+
+smb-flood.nse
+
+```bash
+nmap -p 139,445 --script smb-flood <target>
+```
+
+smb-ls.nse
+
+```bash
+nmap -p 139,445 --script smb-ls <target>
+```
+
+smb-mbenum.nse
+
+```bash
+nmap -p 139,445 --script smb-mbenum <target>
+```
+
+smb-os-discovery.nse
+
+```bash
+nmap -p 139,445 --script smb-os-discovery <target>
+```
+
+smb-print-text.nse
+
+```bash
+nmap -p 139,445 --script smb-print-text <target>
+```
+
+smb-protocols.nse
+
+```bash
+nmap -p 139,445 --script smb-protocols <target>
+```
+
+smb-psexec.nse
+
+```bash
+nmap -p 139,445 --script smb-psexec --script-args smb.passdb="<password-file>" <target>
+```
+
+smb-security-mode.nse
+
+```bash
+nmap -p 139,445 --script smb-security-mode <target>
+```
+
+smb-server-stats.nse
+
+```bash
+nmap -p 139,445 --script smb-server-stats <target>
+```
+
+smb-system-info.nse
+
+```bash
+nmap -p 139,445 --script smb-system-info <target>
+```
+
+smb-vuln-conficker.nse
+
+```bash
+nmap -p 139,445 --script smb-vuln-conficker <target>
+```
+
+smb-vuln-cve-2017-7494.nse
+
+```bash
+nmap -p 139,445 --script smb-vuln-cve-2017-7494 <target>
+```
+
+smb-vuln-cve2009-3103.nse
+
+```bash
+nmap -p 139,445 --script smb-vuln-cve2009-3103 <target>
+```
+
+smb-vuln-ms06-025.nse
+
+```bash
+nmap -p 139,445 --script smb-vuln-ms06-025 <target>
+```
+
+smb-vuln-ms07-029.nse
+
+```bash
+nmap -p 139,445 --script smb-vuln-ms07-029 <target>
+```
+
+smb-vuln-ms08-067.nse
+
+```bash
+nmap -p 139,445 --script smb-vuln-ms08-067 <target>
+```
+
+smb-vuln-ms10-054.nse
+
+```bash
+nmap -p 139,445 --script smb-vuln-ms10-054 <target>
+```
+
+smb-vuln-ms10-061.nse
+
+```bash
+nmap -p 139,445 --script smb-vuln-ms10-061 <target>
+```
+
+smb-vuln-ms17-010.nse
+
+```bash
+nmap -p 139,445 --script smb-vuln-ms17-010 <target>
+```
+
+smb-vuln-regsvc-dos.nse
+
+```bash
+nmap -p 139,445 --script smb-vuln-regsvc-dos <target>
+```
+
+smb-vuln-webexec.nse
+
+```bash
+nmap -p 139,445 --script smb-vuln-webexec <target>
+```
+
+smb-webexec-exploit.nse
+
+```bash
+nmap -p 139,445 --script smb-webexec-exploit --script-args smb.webexec.cmd="<command>" <target>
+```
+
+smb2-capabilities.nse
+
+```bash
+nmap -p 139,445 --script smb2-capabilities <target>
+```
+
+smb2-security-mode.nse
+
+```bash
+nmap -p 139,445 --script smb2-security-mode <target>
+```
+
+smb2-time.nse
+```
+nmap -p 139,445 --script smb2-time <target>
+```
+
+smb2-vuln-uptime.nse
+```
+nmap -p 139,445 --script smb2-vuln-uptime <target>
+```
+
+smtp-brute.nse
+```
+nmap -p 25 --script smtp-brute --script-args smtp.userdb=<user-file>,smtp.passdb=<password-file>,smtp.timeout=5 <target>
+```
+
+smtp-commands.nse
+```
+nmap -p 25 --script smtp-commands <target>
+```
+
+smtp-enum-users.nse
+```
+nmap -p 25 --script smtp-enum-users --script-args smtp.userdb=<user-file> <target>
+```
+
+smtp-ntlm-info.nse
+```
+nmap -p 25 --script smtp-ntlm-info <target>
+```
+
+57. smtp-open-relay.nse:
+```
+nmap -p 25 --script smtp-open-relay <target>
+```
+
+58. smtp-strangeport.nse:
+```
+nmap -p 25 --script smtp-strangeport <target>
+```
+
+59. smtp-vuln-cve2010-4344.nse:
+```
+nmap -p 25 --script smtp-vuln-cve2010-4344 <target>
+```
+
+60. smtp-vuln-cve2011-1720.nse:
+```
+nmap -p 25 --script smtp-vuln-cve2011-1720 <target>
+```
+
+61. smtp-vuln-cve2011-1764.nse:
+```
+nmap -p 25 --script smtp-vuln-cve2011-1764 <target>
+```
+
+62. sniffer-detect.nse:
+```
+nmap --script sniffer-detect <target>
+```
+
+63. snmp-brute.nse:
+```
+nmap -p 161 --script snmp-brute --script-args snmp.passdb="<password-file>" <target>
+```
+
+64. snmp-hh3c-logins.nse:
+```
+nmap -p 161 --script snmp-hh3c-logins <target>
+```
+
+65. snmp-info.nse:
+```
+nmap -p 161 --script snmp-info <target>
+```
+
+66. snmp-interfaces.nse:
+```
+nmap -p 161 --script snmp-interfaces <target>
+```
+
+67. snmp-ios-config.nse:
+```
+nmap -p 161 --script snmp-ios-config <target>
+```
+
+68. snmp-netstat.nse:
+```
+nmap -p 161 --script snmp-netstat <target>
+```
+
+69. snmp-processes.nse:
+```
+nmap -p 161 --script snmp-processes <target>
+```
+
+70. snmp-sysdescr.nse:
+```
+nmap -p 161 --script snmp-sysdescr <target>
+```
+
+71. snmp-win32-services.nse:
+```
+nmap -p 161 --script snmp-win32-services <target>
+```
+
+72. snmp-win32-shares.nse:
+```
+nmap -p 161 --script snmp-win32-shares <target>
+```
+
+73. snmp-win32-software.nse:
+```
+nmap -p 161 --script snmp-win32-software <target>
+```
+
+74. snmp-win32-users.nse:
+```
+nmap -p 161 --script snmp-win32-users <target>
+```
+
+75. socks-auth-info.nse:
+```
+nmap -p 1080 --script socks-auth-info <target>
+```
+
+76. socks-brute.nse:
+```
+nmap -p 1080 --script socks-brute --script-args socks.passdb="<password-file>" <target>
+```
+
+77. socks-open-proxy.nse:
+```
+nmap -p 1080 --script socks-open-proxy <target>
+```
+
+78. ssh-auth-methods.nse:
+```
+nmap -p 22 --script ssh-auth-methods <target>
+```
+
+79. ssh-brute.nse:
+```
+nmap -p 22 --script ssh-brute --script-args ssh.userdb=<user-file>,ssh.passdb=<password-file>,ssh.timeout=5 <target>
+```
+
+80. ssh-hostkey.nse:
+```
+nmap -p 22 --script ssh-hostkey <target>
+```
+
+81. ssh-publickey-acceptance.nse:
+```
+nmap -p 22 --script ssh-publickey-acceptance <target>
+```
+
+82. ssh-run.nse:
+```
+nmap -p 22 --script ssh-run --script-args ssh.cmd="<command>" <target>
+```
+
+83. ssh2-enum-algos.nse:
+```
+nmap -p 22 --script ssh2-enum-algos <target>
+```
+
+84. ssl-ccs-injection.nse:
+```
+nmap --script ssl-ccs-injection <target>
+```
+
+85. ssl-cert-intaddr.nse:
+```
+nmap --script ssl-cert-intaddr <target>
+```
+
+86. ssl-cert.nse:
+```
+nmap --script ssl-cert <target>
+```
+
+87. ssl-date.nse:
+```
+nmap --script ssl-date <target>
+```
+
+88. ssl-dh-params.nse:
+
+```bash
+nmap --script ssl-dh-params <target>
+```
+
+89. ssl-enum-ciphers.nse:
+```
+nmap --script ssl-enum-cip
