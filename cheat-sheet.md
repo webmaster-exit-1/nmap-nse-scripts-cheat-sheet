@@ -3022,196 +3022,235 @@ nmap -p 139,445 --script smb2-security-mode <target>
 ```
 
 smb2-time.nse
-```
+
+```bash
 nmap -p 139,445 --script smb2-time <target>
 ```
 
 smb2-vuln-uptime.nse
-```
+
+```bash
 nmap -p 139,445 --script smb2-vuln-uptime <target>
 ```
 
 smtp-brute.nse
-```
+
+```bash
 nmap -p 25 --script smtp-brute --script-args smtp.userdb=<user-file>,smtp.passdb=<password-file>,smtp.timeout=5 <target>
 ```
 
 smtp-commands.nse
-```
+
+```bash
 nmap -p 25 --script smtp-commands <target>
 ```
 
 smtp-enum-users.nse
-```
+
+```bash
 nmap -p 25 --script smtp-enum-users --script-args smtp.userdb=<user-file> <target>
 ```
 
 smtp-ntlm-info.nse
-```
+
+```bash
 nmap -p 25 --script smtp-ntlm-info <target>
 ```
 
-57. smtp-open-relay.nse:
-```
+smtp-open-relay.nse
+
+```bash
 nmap -p 25 --script smtp-open-relay <target>
 ```
 
-58. smtp-strangeport.nse:
-```
+smtp-strangeport.nse
+
+```bash
 nmap -p 25 --script smtp-strangeport <target>
 ```
 
-59. smtp-vuln-cve2010-4344.nse:
-```
+smtp-vuln-cve2010-4344.nse
+
+```bash
 nmap -p 25 --script smtp-vuln-cve2010-4344 <target>
 ```
 
-60. smtp-vuln-cve2011-1720.nse:
-```
+smtp-vuln-cve2011-1720.nse
+
+```bash
 nmap -p 25 --script smtp-vuln-cve2011-1720 <target>
 ```
 
-61. smtp-vuln-cve2011-1764.nse:
-```
+smtp-vuln-cve2011-1764.nse
+
+```bash
 nmap -p 25 --script smtp-vuln-cve2011-1764 <target>
 ```
 
-62. sniffer-detect.nse:
-```
+sniffer-detect.nse
+
+```bash
 nmap --script sniffer-detect <target>
 ```
 
-63. snmp-brute.nse:
-```
+snmp-brute.nse
+
+```bash
 nmap -p 161 --script snmp-brute --script-args snmp.passdb="<password-file>" <target>
 ```
 
-64. snmp-hh3c-logins.nse:
-```
+snmp-hh3c-logins.nse
+
+```bash
 nmap -p 161 --script snmp-hh3c-logins <target>
 ```
 
-65. snmp-info.nse:
-```
+snmp-info.nse
+
+```bash
 nmap -p 161 --script snmp-info <target>
 ```
 
-66. snmp-interfaces.nse:
-```
+snmp-interfaces.nse
+
+```bash
 nmap -p 161 --script snmp-interfaces <target>
 ```
 
-67. snmp-ios-config.nse:
-```
+snmp-ios-config.nse
+
+```bash
 nmap -p 161 --script snmp-ios-config <target>
 ```
 
-68. snmp-netstat.nse:
-```
+snmp-netstat.nse
+
+```bash
 nmap -p 161 --script snmp-netstat <target>
 ```
 
-69. snmp-processes.nse:
-```
+snmp-processes.nse
+
+```bash
 nmap -p 161 --script snmp-processes <target>
 ```
 
-70. snmp-sysdescr.nse:
-```
+snmp-sysdescr.nse
+
+```bash
 nmap -p 161 --script snmp-sysdescr <target>
 ```
 
-71. snmp-win32-services.nse:
-```
+snmp-win32-services.nse
+
+```bash
 nmap -p 161 --script snmp-win32-services <target>
 ```
 
-72. snmp-win32-shares.nse:
-```
+snmp-win32-shares.nse
+
+```bash
 nmap -p 161 --script snmp-win32-shares <target>
 ```
 
-73. snmp-win32-software.nse:
-```
+snmp-win32-software.nse
+
+```bash
 nmap -p 161 --script snmp-win32-software <target>
 ```
 
-74. snmp-win32-users.nse:
-```
+snmp-win32-users.nse
+
+```bash
 nmap -p 161 --script snmp-win32-users <target>
 ```
 
-75. socks-auth-info.nse:
-```
+socks-auth-info.nse
+
+```bash
 nmap -p 1080 --script socks-auth-info <target>
 ```
 
-76. socks-brute.nse:
-```
+socks-brute.nse
+
+```bash
 nmap -p 1080 --script socks-brute --script-args socks.passdb="<password-file>" <target>
 ```
 
-77. socks-open-proxy.nse:
-```
+socks-open-proxy.nse
+
+```bash
 nmap -p 1080 --script socks-open-proxy <target>
 ```
 
-78. ssh-auth-methods.nse:
-```
+ssh-auth-methods.nse
+
+```bash
 nmap -p 22 --script ssh-auth-methods <target>
 ```
 
-79. ssh-brute.nse:
-```
+ssh-brute.nse
+
+```bash
 nmap -p 22 --script ssh-brute --script-args ssh.userdb=<user-file>,ssh.passdb=<password-file>,ssh.timeout=5 <target>
 ```
 
-80. ssh-hostkey.nse:
-```
+ssh-hostkey.nse
+
+```bash
 nmap -p 22 --script ssh-hostkey <target>
 ```
 
-81. ssh-publickey-acceptance.nse:
-```
+ssh-publickey-acceptance.nse
+
+```bash
 nmap -p 22 --script ssh-publickey-acceptance <target>
 ```
 
-82. ssh-run.nse:
-```
+ssh-run.nse
+
+```bash
 nmap -p 22 --script ssh-run --script-args ssh.cmd="<command>" <target>
 ```
 
-83. ssh2-enum-algos.nse:
-```
+ssh2-enum-algos.nse
+
+```bash
 nmap -p 22 --script ssh2-enum-algos <target>
 ```
 
-84. ssl-ccs-injection.nse:
-```
+ssl-ccs-injection.nse
+
+```bash
 nmap --script ssl-ccs-injection <target>
 ```
 
-85. ssl-cert-intaddr.nse:
-```
+ssl-cert-intaddr.nse
+
+```bash
 nmap --script ssl-cert-intaddr <target>
 ```
 
-86. ssl-cert.nse:
-```
+ssl-cert.nse
+
+```bash
 nmap --script ssl-cert <target>
 ```
 
-87. ssl-date.nse:
-```
+ssl-date.nse
+
+```bash
 nmap --script ssl-date <target>
 ```
 
-88. ssl-dh-params.nse:
+ssl-dh-params.nse
 
 ```bash
 nmap --script ssl-dh-params <target>
 ```
 
-89. ssl-enum-ciphers.nse:
+ssl-enum-ciphers.nse
+
+```bash
+nmap --script ssl-enum-cip <target>
 ```
-nmap --script ssl-enum-cip
