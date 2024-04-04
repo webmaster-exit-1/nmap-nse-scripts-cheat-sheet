@@ -2451,3 +2451,182 @@ omp2-enum-targets.nse
 ```bash
 nmap -p10800 --script omp2-enum-targets <target>
 ```
+
+# omp2-brute.nse
+
+```bash
+nmap -p 1024 --script omp2-brute --script-args userdb=users.txt,passdb=passwords.txt <target>
+```
+
+omp2-enum-targets.nse
+```bash
+nmap -p 1024 --script omp2-enum-targets <target>
+```
+
+omron-info.nse
+
+```bash
+nmap -p 9600 --script omron-info <target>
+```
+
+openflow-info.nse
+
+```bash
+nmap -p 6653 --script openflow-info <target>
+```
+
+openlookup-info.nse
+
+```bash
+nmap -p 435 --script openlookup-info <target>
+```
+
+openvas-otp-brute.nse
+
+```bash
+nmap -p 9390 --script openvas-otp-brute --script-args userdb=users.txt,passdb=passwords.txt <target>
+```
+
+openwebnet-discovery.nse
+
+```bash
+nmap --script openwebnet-discovery <target>
+```
+
+oracle-brute-stealth.nse
+
+```bash
+nmap -p 1521 --script oracle-brute-stealth --script-args oracle-brute-stealth.userdb=users.txt,oracle-brute-stealth.passdb=passwords.txt <target>
+```
+
+oracle-brute.nse
+
+```bash
+nmap -p 1521 --script oracle-brute --script-args oracle-brute.userdb=users.txt,oracle-brute.passdb=passwords.txt <target>
+```
+
+oracle-enum-users.nse
+
+```bash
+nmap -p 1521 --script oracle-enum-users --script-args oracle-enum-users.userdb=users.txt <target>
+```
+
+oracle-sid-brute.nse
+
+```bash
+nmap -p 1521 --script oracle-sid-brute --script-args oracle-sid-brute.sid=ORCL <target>
+```
+
+oracle-tns-version.nse
+
+```bash
+nmap -p 1521 --script oracle-tns-version <target>
+```
+
+ovs-agent-version.nse
+
+```bash
+nmap -p 6640 --script ovs-agent-version <target>
+```
+
+p2p-conficker.nse
+
+```bash
+nmap -p 6346,6347 --script p2p-conficker <target>
+```
+
+path-mtu.nse
+
+```bash
+nmap -p 1723 --script path-mtu <target>
+```
+
+pcanywhere-brute.nse
+
+```bash
+nmap -p 5631 --script pcanywhere-brute --script-args pcanywhere-brute.userdb=users.txt,pcanywhere-brute.passdb=passwords.txt <target>
+```
+
+pcworx-info.nse
+
+```bash
+nmap -p 2381 --script pcworx-info <target>
+```
+
+pgsql-brute.nse
+
+```bash
+nmap -p 5432 --script pgsql-brute --script-args pgsql-brute.userdb=users.txt,pgsql-brute.passdb=passwords.txt <target>
+```
+
+pjl-ready-message.nse
+
+```bash
+nmap -p 9100 --script pjl-ready-message <target>
+```
+
+pop3-brute.nse
+
+```bash
+nmap -p 110 --script pop3-brute --script-args pop3-brute.userdb=users.txt,pop3-brute.passdb=passwords.txt <target>
+```
+
+pop3-capabilities.nse
+
+```bash
+nmap -p 110 --script pop3-capabilities <target>
+```
+
+pop3-ntlm-info.nse
+
+```bash
+nmap -p 110 --script pop3-ntlm-info <target>
+```
+
+port-states.nse
+
+```bash
+nmap -p <port> --script port-states <target>
+```
+
+pptp-version.nse
+
+```bash
+nmap -p 1723 --script pptp-version <target>
+```
+
+puppet-naivesigning.nse
+
+```bash
+nmap -p 8140 --script puppet-naivesigning --script-args puppet-naivesigning.command=ls <target>
+```
+
+qconn-exec.nse
+
+```bash
+nmap -p 27017 --script qconn-exec --script-args qconn-exec.cmd=ls <target>
+```
+
+qscan.nse
+
+```bash
+nmap -p 5000 --script qscan <target>
+```
+
+quake3-info.nse
+
+```bash
+nmap -p 27960 --script quake3-info 192.168.1.10
+```
+
+quake3-master-getservers.nse
+
+```bash
+nmap -p 27960 --script quake3-master-getservers 192.168.1.10
+```
+
+rdp-enum-encryption.nse
+
+```bash
+nmap -p 3389 --script rdp-enum-encryption 192.168.
+```
