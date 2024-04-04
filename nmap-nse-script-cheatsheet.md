@@ -2452,7 +2452,7 @@ omp2-enum-targets.nse
 nmap -p10800 --script omp2-enum-targets <target>
 ```
 
-# omp2-brute.nse
+omp2-brute.nse
 
 ```bash
 nmap -p 1024 --script omp2-brute --script-args userdb=users.txt,passdb=passwords.txt <target>
