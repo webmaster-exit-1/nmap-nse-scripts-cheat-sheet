@@ -2616,17 +2616,17 @@ nmap -p 5000 --script qscan <target>
 quake3-info.nse
 
 ```bash
-nmap -p 27960 --script quake3-info 192.168.1.10
+nmap -p 27960 --script quake3-info <target>
 ```
 
 quake3-master-getservers.nse
 
 ```bash
-nmap -p 27960 --script quake3-master-getservers 192.168.1.10
+nmap -p 27960 --script quake3-master-getservers <target>
 ```
 
 rdp-enum-encryption.nse
 
 ```bash
-nmap -p 3389 --script rdp-enum-encryption 192.168.1.10
+nmap -p 3389 --script rdp-enum-encryption <target>
 ```
