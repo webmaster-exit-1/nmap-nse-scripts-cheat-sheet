@@ -3254,3 +3254,201 @@ ssl-enum-ciphers.nse
 ```bash
 nmap --script ssl-enum-cip <target>
 ```
+
+traceroute-geolocation.nse
+
+```bash
+nmap -sP -PE -PA21,23,25,80,3389,443,445,8080,8443 --script traceroute-geolocation <target>
+```
+
+tso-brute.nse
+
+```bash
+nmap -p 111 --script tso-brute <target>
+```
+
+tso-enum.nse
+
+```bash
+nmap -p 111 --script tso-enum <target>
+```
+
+ubiquiti-discovery.nse
+
+```bash
+nmap -p 443 --script ubiquiti-discovery <target>
+```
+
+unittest.nse
+
+```bash
+nmap -p 12345 --script unittest <target>
+```
+
+unusual-port.nse
+
+```bash
+nmap -p- --script unusual-port <target>
+```
+
+upnp-info.nse
+
+```bash
+nmap -p 1900 --script upnp-info <target>
+```
+
+uptime-agent-info.nse
+
+```bash
+nmap -p 25 --script uptime-agent-info <target>
+```
+
+url-snarf.nse
+
+```bash
+nmap -p 80,443 --script url-snarf <target>
+```
+
+ventrilo-info.nse
+
+```bash
+nmap -p 3784 --script ventrilo-info <target>
+```
+
+versant-info.nse
+
+```bash
+nmap -p 777 --script versant-info <target>
+```
+
+vmauthd-brute.nse
+
+```bash
+nmap -p 902 --script vmauthd-brute <target>
+```
+
+vmware-version.nse
+
+```bash
+nmap -p 902 --script vmware-version <target>
+```
+
+vnc-brute.nse
+
+```bash
+nmap -p 5900 --script vnc-brute <target>
+```
+
+vnc-info.nse
+
+```bash
+nmap -p 5900 --script vnc-info <target>
+```
+
+vnc-title.nse
+
+```bash
+nmap -p 5900 --script vnc-title <target>
+```
+
+voldemort-info.nse
+
+```bash
+nmap -p 6666 --script voldemort-info <target>
+```
+
+vtam-enum.nse
+
+```bash
+nmap -p 1998 --script vtam-enum <target>
+```
+
+vulners.nse
+
+```bash
+nmap -p 80,443 --script vulners <target>
+```
+
+vulners.nse.1
+
+```bash
+nmap -p 80,443 --script vulners.nse <target>
+```
+
+vulners.nse.2
+
+```bash
+nmap -p 80,443 --script vulners.nse <target>
+```
+
+vulners.nse.3
+
+```bash
+nmap -p 80,443 --script vulners.nse <target>
+```
+
+vuze-dht-info.nse
+
+```bash
+nmap -p 6881 --script vuze-dht-info <target>
+```
+
+wdb-version.nse
+
+```bash
+nmap -p 9102 --script wdb-version <target>
+```
+
+weblogic-t3-info.nse
+
+```bash
+nmap -p 7001 --script weblogic-t3-info <target>
+```
+
+whois-domain.nse
+
+```bash
+nmap --script whois-domain <target>
+```
+
+whois-ip.nse
+
+```bash
+nmap --script whois-ip <target>
+```
+
+wsdd-discover.nse
+
+```bash
+nmap --script wsdd-discover <target>
+```
+
+x11-access.nse
+
+```bash
+nmap -p 6000 --script x11-access <target>
+```
+
+xdmcp-discover.nse
+
+```bash
+nmap -p 177 --script xdmcp-discover <target>
+```
+
+xmlrpc-methods.nse
+
+```bash
+nmap -p 80,443 --script xmlrpc-methods <target>
+```
+
+xmpp-brute.nse
+
+```bash
+nmap -p 5222 --script xmpp-brute <target>
+```
+
+xmpp-info.nse
+
+```bash
+nmap -p 5222 --script xmpp-info <target>
+```
