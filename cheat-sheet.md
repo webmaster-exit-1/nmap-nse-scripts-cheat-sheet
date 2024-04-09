@@ -2,7 +2,7 @@
 
 # 
 
-- This **<u>NMap<\u> NSE Scripts Cheat Sheet** was created to be a quick reference/tl;dr for **each** of the **official nmap nse scripts** that the **nmap** software provides. Almost every entry has the "default" port number associated with the service each nse script is scanning for.
+- This **<u>NMap<u/> NSE Scripts Cheat Sheet** was created to be a quick reference/tl;dr for **each** of the **official nmap nse scripts** that the **nmap** software provides. Almost every entry has the "default" port number associated with the service each nse script is scanning for.
 
 #
 
