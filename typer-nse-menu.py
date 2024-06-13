@@ -20,7 +20,7 @@ def load_nse_scripts(file_path):
         content = f.read()
 
     # Matches the script name and parameters
-    matches = re.findall(r'(\w+.nse)\n\n```bash\n(nmap .+?)\n```', content, re.DOTALL)
+    matches = re.findall(r'(.*\.nse)\n\n```bash\n(nmap .+?)\n```', content, re.DOTALL)
 
     for match in matches:
         script, command = match
