@@ -27,8 +27,7 @@ def load_nse_scripts(file_path):
     return nse_scripts
 
 def main():
-    nse_scripts = load_nse_scripts('path_to_your_cheat_sheet')
-
+    nse_scripts = load_nse_scripts('cheat-sheet.md')
     print("Please choose an NSE script:")
     for i, script in enumerate(nse_scripts.keys(), start=1):
         print(f"{i}. {script}")
