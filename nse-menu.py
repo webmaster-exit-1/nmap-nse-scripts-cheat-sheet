@@ -1,4 +1,5 @@
 import subprocess
+import re
 
 def run_nmap(nse_script, target, parameters):
     command = f"nmap --script={nse_script} {parameters} {target}"
@@ -10,12 +11,23 @@ def run_nmap(nse_script, target, parameters):
     else:
         print(output)
 
+def load_nse_scripts(file_path):
+    nse_scripts = {}
+    with open(file_path, 'r') as f:
+        content = f.read()
+
+    # Matches the script name and parameters
+    matches = re.findall(r'(\w+.nse)\n\n```bash\n(nmap .+?)\n```', content, re.DOTALL)
+
+    for match in matches:
+        script, command = match
+        parameters = command.replace('nmap ', '').replace('<target>', '').replace(f'--script {script}', '').strip()
+        nse_scripts[script] = parameters
+
+    return nse_scripts
+
 def main():
-    nse_scripts = {
-        "vuln": "",
-        "auth": "--script-args user=foo,pass=bar",
-        # Add more scripts and their parameters here...
-    }
+    nse_scripts = load_nse_scripts('path_to_your_cheat_sheet')
 
     print("Please choose an NSE script:")
     for i, script in enumerate(nse_scripts.keys(), start=1):
