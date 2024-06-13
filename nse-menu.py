@@ -24,8 +24,8 @@ def load_nse_scripts(file_path):
 
     for match in matches:
         script, command = match
-        parameters = command.replace('nmap ', '').replace('<target>', '').replace(f'--script {script}', '').strip()
-        nse_scripts[script.replace('.nse', '')] = parameters  # remove .nse extension from script name
+        parameters = command.replace('nmap ', '').replace('<target>', '').strip()
+        nse_scripts[script] = parameters  # keep .nse extension
 
     return nse_scripts
 
