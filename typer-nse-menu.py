@@ -19,14 +19,13 @@ def load_nse_scripts(file_path):
     with open(file_path, 'r') as f:
         content = f.read()
 
-    # Matches the script name and parameters
     matches = re.findall(r'(.*\.nse)\n\n```bash\n(nmap .+?)\n```', content, re.DOTALL)
 
     for match in matches:
         script, command = match
         script = script.strip()  # Strip leading/trailing white spaces from script name
-        parameters = command.replace('nmap ', '').replace(f'--script {script}', '').strip()  # Extract parameters from command
-        nse_scripts[script] = parameters
+        arguments = re.findall(r'<(.*?)>', command)  # Extract arguments from command
+        nse_scripts[script] = arguments
 
     return nse_scripts
 
@@ -45,15 +44,16 @@ def main():
         return
 
     chosen_script = list(nse_scripts.keys())[choice-1]
-    parameters = nse_scripts[chosen_script]
+    arguments = nse_scripts[chosen_script]
 
-    # Extract the parameter names
-    parameter_names = re.findall(r'<(.*?)>', parameters)
+    # Prompt the user for each argument
+    arg_values = {}
+    for arg in arguments:
+        value = typer.prompt(f"Enter the value for {arg}: ")
+        arg_values[arg] = value
 
-    # Prompt the user for each parameter
-    for param_name in parameter_names:
-        param_value = typer.prompt(f"Enter the value for {param_name}: ")
-        parameters = parameters.replace(f"<{param_name}>", param_value)
+    # Construct the parameters string
+    parameters = ' '.join(f'--script-args {arg}={value}' for arg, value in arg_values.items())
 
     target = typer.prompt("Enter the target: ")
 
