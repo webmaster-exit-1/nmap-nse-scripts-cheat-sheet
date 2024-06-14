@@ -40,6 +40,10 @@ def main():
 
     choice = int(typer.prompt("Enter your choice: "))
 
+    if choice < 1 or choice > len(nse_scripts):
+        print("Invalid choice. Please select a number from the list.")
+        return
+
     chosen_script = list(nse_scripts.keys())[choice-1]
     parameters = nse_scripts[chosen_script]
 
