@@ -29,9 +29,8 @@ def load_nse_scripts(file_path):
 @app.command()
 def main():
     nse_scripts = load_nse_scripts('cheat-sheet.md')
-
     print("Please choose an NSE script:")
-    for i, script in enumerate(nse_scripts.keys(), start=1):
+    for i, script in enumerate(nse_scripts, start=1):
         print(f"{i}. {script}")
 
     choice = int(typer.prompt("Enter your choice: "))
