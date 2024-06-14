@@ -19,13 +19,14 @@ def load_nse_scripts(file_path):
     with open(file_path, 'r') as f:
         content = f.read()
 
-    # Matches the script name before the code block
-    matches = re.findall(r'(.*\.nse)(?=\n\n```bash)', content)
+    # Matches the script name and parameters
+    matches = re.findall(r'(.*\.nse)\n\n```bash\n(nmap .+?)\n```', content, re.DOTALL)
 
     for match in matches:
-        # Strip leading/trailing white spaces and remove .nse extension
-        script = match.strip()
-        nse_scripts[script] = ""  # As of now, setting parameters as empty string
+        script, command = match
+        script = script.strip()  # Strip leading/trailing white spaces from script name
+        parameters = command.replace('nmap ', '').replace(f'--script {script}', '').strip()  # Extract parameters from command
+        nse_scripts[script] = parameters
 
     return nse_scripts
 
