@@ -10,27 +10,32 @@ def run_nmap(nse_script: str, target: str, parameters: str):
     output, error = process.communicate()
 
     if error:
-        print(f"Error: {error}")
+        print(f"Error: {error.decode()}")
     else:
         print(output.decode())  # decode bytes to string
-import re
 
 def load_nse_scripts(file_path):
-    nse_scripts = []
+    nse_scripts = {}
     with open(file_path, 'r') as f:
         content = f.read()
-    # Matches the script name before the code block
-    script_names = re.findall(r'(.*\.nse)(?=\n\n```bash)', content)
-    for name in script_names:
-        # Strip leading/trailing white spaces
-        nse_scripts.append(name.strip())
+
+    # Matches the script name and parameters
+    matches = re.findall(r'(.*\.nse)\n\n```bash\n(nmap .+?)\n```', content, re.DOTALL)
+
+    for match in matches:
+        script, command = match
+        script = script.strip()  # Strip leading/trailing white spaces from script name
+        parameters = command.replace('nmap ', '').replace(f'--script {script}', '').strip()  # Extract parameters from command
+        nse_scripts[script] = parameters
+
     return nse_scripts
 
 @app.command()
 def main():
     nse_scripts = load_nse_scripts('cheat-sheet.md')
+
     print("Please choose an NSE script:")
-    for i, script in enumerate(nse_scripts, start=1):
+    for i, script in enumerate(nse_scripts.keys(), start=1):
         print(f"{i}. {script}")
 
     choice = int(typer.prompt("Enter your choice: "))
