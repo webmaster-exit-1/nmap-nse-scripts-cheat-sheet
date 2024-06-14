@@ -38,10 +38,21 @@ def main():
         print(f"{i}. {script}")
 
     choice = int(typer.prompt("Enter your choice: "))
-    target = typer.prompt("Enter the target: ")
 
     chosen_script = list(nse_scripts.keys())[choice-1]
-    run_nmap(chosen_script, target, nse_scripts[chosen_script])
+    parameters = nse_scripts[chosen_script]
+
+    # Extract the parameter names
+    parameter_names = re.findall(r'<(.*?)>', parameters)
+
+    # Prompt the user for each parameter
+    for param_name in parameter_names:
+        param_value = typer.prompt(f"Enter the value for {param_name}: ")
+        parameters = parameters.replace(f"<{param_name}>", param_value)
+
+    target = typer.prompt("Enter the target: ")
+
+    run_nmap(chosen_script, target, parameters)
 
 if __name__ == "__main__":
     app()
