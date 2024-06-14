@@ -13,21 +13,17 @@ def run_nmap(nse_script: str, target: str, parameters: str):
         print(f"Error: {error}")
     else:
         print(output.decode())  # decode bytes to string
+import re
 
 def load_nse_scripts(file_path):
-    nse_scripts = {}
+    nse_scripts = []
     with open(file_path, 'r') as f:
         content = f.read()
-
-    # Matches the script name and parameters
-    matches = re.findall(r'(.*\.nse)\n\n```bash\n(nmap .+?)\n```', content, re.DOTALL)
-
-    for match in matches:
-        script, command = match
-        script = script.strip()  # Strip leading/trailing white spaces from script name
-        parameters = command.replace('nmap ', '').replace(f'--script {script}', '').strip()  # Extract parameters from command
-        nse_scripts[script] = parameters
-
+    # Matches the script name before the code block
+    script_names = re.findall(r'(.*\.nse)(?=\n\n```bash)', content)
+    for name in script_names:
+        # Strip leading/trailing white spaces
+        nse_scripts.append(name.strip())
     return nse_scripts
 
 @app.command()
