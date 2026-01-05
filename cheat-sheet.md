@@ -4,6 +4,40 @@
 
 - This **_NMap NSE Scripts Cheat Sheet_** was created to be a quick reference/tl;dr for **each** of the **official nmap nse scripts** that the **nmap** software provides. Almost every entry has the "default" port number associated with the service each nse script is scanning for.
 
+💡 **Pro-Tip**: Press Ctrl + F (or Cmd + F) and type a service name (like 'redis' or 'smb') to jump straight to the script you need.
+
+#
+
+## Jump-Bar Minimap
+
+<a href="#a">A</a> | <a href="#b">B</a> | <a href="#c">C</a> | <a href="#d">D</a> | <a href="#e">E</a> | <a href="#f">F</a> | <a href="#g">G</a> | <a href="#h">H</a> | <a href="#i">I</a> | <a href="#j">J</a> | <a href="#k">K</a> | <a href="#l">L</a> | <a href="#m">M</a> | <a href="#n">N</a> | <a href="#o">O</a> | <a href="#p">P</a> | <a href="#q">Q</a> | <a href="#r">R</a> | <a href="#s">S</a> | <a href="#t">T</a> | <a href="#u">U</a> | <a href="#v">V</a> | <a href="#w">W</a> | <a href="#x">X</a>
+
+#
+
+## Top 10 Must-Run Scripts
+
+### Discovery
+- **smb-os-discovery.nse** - Identifies OS information via SMB
+- **http-enum.nse** - Enumerates common web application directories
+- **dns-brute.nse** - Brute forces DNS subdomains
+
+### Vulnerabilities
+- **vulners.nse** - Checks for known vulnerabilities using Vulners database
+- **ssl-heartbleed.nse** - Tests for the Heartbleed vulnerability
+- **smb-vuln-ms17-010.nse** - Tests for the EternalBlue vulnerability
+- **http-vuln-cve2017-5638.nse** - Tests for Apache Struts vulnerability
+
+### Auditing
+- **smb-protocols.nse** - Lists SMB protocol versions supported
+- **rdp-enum-encryption.nse** - Enumerates RDP encryption levels
+- **mongodb-databases.nse** - Lists MongoDB databases
+
+#
+
+## <a name="a"></a>Scripts: A
+
+[⬆ Back to Top](#jump-bar-minimap)
+
 #
 
 afp-ls.nse
@@ -89,6 +123,12 @@ auth-spoof.nse
 ```bash
 nmap -p 22 --script auth-spoof --script-args auth-spoof.timeout=4s,auth-spoof.max-retries=3 <target>
 ```
+
+## <a name="b"></a>Scripts: B
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 backorifice-brute.nse
 
@@ -348,6 +388,12 @@ broadcast-xdmcp-discover.nse
 nmap -p 6000 --script broadcast-xdmcp-discover --script-args broadcast-xdmcp-discover.timeout=4s,broadcast-xdmcp-discover.max-retries=3 <target>
 ```
 
+## <a name="c"></a>Scripts: C
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
+
 cassandra-brute.nse
 
 ```bash
@@ -453,7 +499,7 @@ nmap -p 5984 --script couchdb-databases <target>
 creds-summary.nse
 
 ```bash
-nmap -p 5984 --script couchdb-stats <target>
+nmap --script creds-summary <target>
 ```
 
 cups-info.nse
@@ -479,6 +525,12 @@ cvs-brute.nse
 ```bash
 nmap -p 2401 --script cvs-brute --script-args cvs-brute.host=<host>,cvs-brute.module=<module> <target>
 ```
+
+## <a name="d"></a>Scripts: D
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 daap-get-library.nse
 
@@ -689,6 +741,12 @@ duplicates.nse
 nmap --script duplicates <target>
 ```
 
+## <a name="e"></a>Scripts: E
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
+
 eap-info.nse
 
 ```bash
@@ -712,6 +770,12 @@ eppc-enum-processes.nse
 ```bash
 nmap -p 102 --script eppc-enum-processes <target>
 ```
+
+## <a name="f"></a>Scripts: F
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 fcrdns.nse
 
@@ -809,6 +873,12 @@ ftp-vuln-cve2010-4221.nse
 nmap -p 21 --script ftp-vuln-cve2010-4221 <target>
 ```
 
+## <a name="g"></a>Scripts: G
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
+
 ganglia-info.nse
 
 ```bash
@@ -838,6 +908,12 @@ gpsd-info.nse
 ```bash
 nmap -p 2947 --script gpsd-info <target>
 ```
+
+## <a name="h"></a>Scripts: H
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 hadoop-datanode-info.nse
 
@@ -1738,6 +1814,12 @@ iax2-version.nse
 nmap -p5034 --script iax2-version <target>
 ```
 
+## <a name="i"></a>Scripts: I
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
+
 icap-info.nse
 
 ```bash
@@ -1936,6 +2018,12 @@ isns-info.nse
 nmap -p1900 --script isns-info <target>
 ```
 
+## <a name="j"></a>Scripts: J
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
+
 jdwp-exec.nse
 
 ```bash
@@ -1960,6 +2048,12 @@ jdwp-version.nse
 nmap -p8080 --script jdwp-version <target>
 ```
 
+## <a name="k"></a>Scripts: K
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
+
 knx-gateway-discover.nse
 
 ```bash
@@ -1977,6 +2071,12 @@ krb5-enum-users.nse
 ```bash
 nmap -p88 --script krb5-enum-users --script-args userdb=/path/to/user/list.txt <target>
 ```
+
+## <a name="l"></a>Scripts: L
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 ldap-brute.nse
 
@@ -2025,6 +2125,12 @@ lu-enum.nse
 ```bash
 nmap -p8080 --script lu-enum <target>
 ```
+
+## <a name="m"></a>Scripts: M
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 maxdb-info.nse
 
@@ -2284,6 +2390,12 @@ mysql-vuln-cve2012-2122.nse
 nmap -p3306 --script mysql-vuln-cve2012-2122 <target>
 ```
 
+## <a name="n"></a>Scripts: N
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
+
 nat-pmp-info.nse
 
 ```bash
@@ -2463,6 +2575,12 @@ omp2-enum-targets.nse
 nmap -p 1024 --script omp2-enum-targets <target>
 ```
 
+## <a name="o"></a>Scripts: O
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
+
 omron-info.nse
 
 ```bash
@@ -2535,6 +2653,12 @@ p2p-conficker.nse
 nmap -p 6346,6347 --script p2p-conficker <target>
 ```
 
+## <a name="p"></a>Scripts: P
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
+
 path-mtu.nse
 
 ```bash
@@ -2601,10 +2725,16 @@ puppet-naivesigning.nse
 nmap -p 8140 --script puppet-naivesigning --script-args puppet-naivesigning.command=ls <target>
 ```
 
+## <a name="q"></a>Scripts: Q
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
+
 qconn-exec.nse
 
 ```bash
-nmap -p 27017 --script qconn-exec --script-args qconn-exec.cmd=ls <target>
+nmap -p 8000 --script qconn-exec --script-args qconn-exec.cmd=ls <target>
 ```
 
 qscan.nse
@@ -2624,6 +2754,12 @@ quake3-master-getservers.nse
 ```bash
 nmap -p 27960 --script quake3-master-getservers <target>
 ```
+
+## <a name="r"></a>Scripts: R
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 rdp-enum-encryption.nse
 
@@ -2780,6 +2916,12 @@ samba-vuln-cve-2012-1182.nse
 ```bash
 nmap -p 445 --script samba-vuln-cve-2012-1182 <target>
 ```
+
+## <a name="s"></a>Scripts: S
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 servicetags.nse
 
@@ -3249,11 +3391,23 @@ ssl-dh-params.nse
 nmap --script ssl-dh-params <target>
 ```
 
+ssl-heartbleed.nse
+
+```bash
+nmap -p 443 --script ssl-heartbleed <target>
+```
+
 ssl-enum-ciphers.nse
 
 ```bash
 nmap --script ssl-enum-cip <target>
 ```
+
+## <a name="t"></a>Scripts: T
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 traceroute-geolocation.nse
 
@@ -3272,6 +3426,12 @@ tso-enum.nse
 ```bash
 nmap -p 111 --script tso-enum <target>
 ```
+
+## <a name="u"></a>Scripts: U
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 ubiquiti-discovery.nse
 
@@ -3308,6 +3468,12 @@ url-snarf.nse
 ```bash
 nmap -p 80,443 --script url-snarf <target>
 ```
+
+## <a name="v"></a>Scripts: V
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 ventrilo-info.nse
 
@@ -3366,25 +3532,7 @@ nmap -p 1998 --script vtam-enum <target>
 vulners.nse
 
 ```bash
-nmap -p 80,443 --script vulners <target>
-```
-
-vulners.nse.1
-
-```bash
-nmap -p 80,443 --script vulners.nse <target>
-```
-
-vulners.nse.2
-
-```bash
-nmap -p 80,443 --script vulners.nse <target>
-```
-
-vulners.nse.3
-
-```bash
-nmap -p 80,443 --script vulners.nse <target>
+nmap -sV -p 80,443 --script vulners <target>
 ```
 
 vuze-dht-info.nse
@@ -3392,6 +3540,12 @@ vuze-dht-info.nse
 ```bash
 nmap -p 6881 --script vuze-dht-info <target>
 ```
+
+## <a name="w"></a>Scripts: W
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 wdb-version.nse
 
@@ -3428,6 +3582,12 @@ x11-access.nse
 ```bash
 nmap -p 6000 --script x11-access <target>
 ```
+
+## <a name="x"></a>Scripts: X
+
+[⬆ Back to Top](#jump-bar-minimap)
+
+#
 
 xdmcp-discover.nse
 
