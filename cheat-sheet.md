@@ -3478,7 +3478,7 @@ nmap -p 443 --script ssl-poodle <target>
 ssl-enum-ciphers.nse
 
 ```bash
-nmap --script ssl-enum-cip <target>
+nmap --script ssl-enum-ciphers <target>
 ```
 
 sslv2-drown.nse
