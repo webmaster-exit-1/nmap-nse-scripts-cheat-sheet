@@ -38,7 +38,7 @@ This repository is built to save you time and increase productivity.
 ---
 
 ## 📜 License
-This cheat sheet is open-source under the MIT license. Contributions, suggestions, and improvements are always welcome!
+This cheat sheet is open-source under the GPLV3 license. Contributions, suggestions, and improvements are always welcome!
 
 ---
 
