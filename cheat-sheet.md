@@ -40,6 +40,24 @@
 
 #
 
+acarsd-info.nse
+
+```bash
+nmap -p 5550 --script acarsd-info --script-args acarsd-info.timeout=4s,acarsd-info.max-retries=3 <target>
+```
+
+address-info.nse
+
+```bash
+nmap --script address-info --script-args address-info.timeout=4s,address-info.max-retries=3 <target>
+```
+
+afp-brute.nse
+
+```bash
+nmap -p 548 --script afp-brute --script-args afp-brute.userdb=users.txt,afp-brute.passdb=passwords.txt,afp-brute.timeout=4s,afp-brute.max-retries=3 <target>
+```
+
 afp-ls.nse
 
 ```bash
@@ -945,6 +963,12 @@ hadoop-tasktracker-info.nse
 nmap -p 50060 --script hadoop-tasktracker-info <target>
 ```
 
+hartip-info.nse
+
+```bash
+nmap -p 1911 --script hartip-info --script-args hartip-info.timeout=4s,hartip-info.max-retries=3 <target>
+```
+
 hbase-master-info.nse
 
 ```bash
@@ -1832,6 +1856,12 @@ iec-identify.nse
 nmap -p6000-6005 --script iec-identify <target>
 ```
 
+iec61850-mms.nse
+
+```bash
+nmap -p 102 --script iec61850-mms --script-args iec61850-mms.timeout=4s,iec61850-mms.max-retries=3 <target>
+```
+
 ike-version.nse
 
 ```bash
@@ -2186,6 +2216,18 @@ mikrotik-routeros-brute.nse
 nmap -p8728 --script mikrotik-routeros-brute --script-args userdb=/path/to/user/list.txt <target>
 ```
 
+mikrotik-routeros-username-brute.nse
+
+```bash
+nmap -p8728 --script mikrotik-routeros-username-brute --script-args userdb=/path/to/user/list.txt <target>
+```
+
+mikrotik-routeros-version.nse
+
+```bash
+nmap -p8728 --script mikrotik-routeros-version <target>
+```
+
 mmouse-brute.nse
 
 ```bash
@@ -2322,6 +2364,12 @@ murmur-version.nse
 
 ```bash
 nmap -p64738 --script murmur-version <target>
+```
+
+multicast-profinet-discovery.nse
+
+```bash
+nmap --script multicast-profinet-discovery --script-args multicast-profinet-discovery.timeout=4s,multicast-profinet-discovery.max-retries=3 <target>
 ```
 
 mysql-audit.nse
@@ -2707,6 +2755,12 @@ pop3-ntlm-info.nse
 nmap -p 110 --script pop3-ntlm-info <target>
 ```
 
+profinet-cm-lookup.nse
+
+```bash
+nmap -p 34964 --script profinet-cm-lookup --script-args profinet-cm-lookup.timeout=4s,profinet-cm-lookup.max-retries=3 <target>
+```
+
 port-states.nse
 
 ```bash
@@ -2741,6 +2795,12 @@ qscan.nse
 
 ```bash
 nmap -p 5000 --script qscan <target>
+```
+
+quake1-info.nse
+
+```bash
+nmap -p 26000 --script quake1-info --script-args quake1-info.timeout=4s,quake1-info.max-retries=3 <target>
 ```
 
 quake3-info.nse
@@ -3361,6 +3421,12 @@ ssh2-enum-algos.nse
 nmap -p 22 --script ssh2-enum-algos <target>
 ```
 
+sshv1.nse
+
+```bash
+nmap -p 22 --script sshv1 <target>
+```
+
 ssl-ccs-injection.nse
 
 ```bash
@@ -3397,10 +3463,52 @@ ssl-heartbleed.nse
 nmap -p 443 --script ssl-heartbleed <target>
 ```
 
+ssl-known-key.nse
+
+```bash
+nmap -p 443 --script ssl-known-key <target>
+```
+
+ssl-poodle.nse
+
+```bash
+nmap -p 443 --script ssl-poodle <target>
+```
+
 ssl-enum-ciphers.nse
 
 ```bash
-nmap --script ssl-enum-cip <target>
+nmap --script ssl-enum-ciphers <target>
+```
+
+sslv2-drown.nse
+
+```bash
+nmap -p 443 --script sslv2-drown <target>
+```
+
+sslv2.nse
+
+```bash
+nmap -p 443 --script sslv2 <target>
+```
+
+stun-info.nse
+
+```bash
+nmap -p 3478 --script stun-info <target>
+```
+
+stun-version.nse
+
+```bash
+nmap -p 3478 --script stun-version <target>
+```
+
+supermicro-ipmi-conf.nse
+
+```bash
+nmap -p 623 --script supermicro-ipmi-conf <target>
 ```
 
 ## <a name="t"></a>Scripts: T
