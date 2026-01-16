@@ -1,49 +1,28 @@
 # Nmap NSE Scripts Cheat Sheet
 
-Welcome to the **Nmap NSE Scripts Cheat Sheet**! 🛠️
+## Introduction
+This cheat sheet provides a quick reference to various Nmap NSE scripts, helping users effectively utilize Nmap in their security assessments and audits.
 
-This cheat sheet is an all-in-one guide to the official **NSE (Nmap Scripting Engine)** scripts provided by Nmap. It outlines correct usage, recommended commands, and tips for getting the most out of these powerful tools for penetration testing, auditing, and network discovery.
+## Installation
+To install Nmap and its NSE scripts, follow the installation instructions on the official Nmap website.
 
----
+## Common Scripts
+Here is a list of commonly used Nmap NSE scripts:
 
-## ✨ Key Features
+- **http-enum**: Enumerates directories and files on web servers.
+- **smb-vuln-ms17-010**: Checks for the EternalBlue vulnerability.
+- **dns-brute**: Performs brute force DNS enumeration.
 
-- **Jump Menu for Quick Navigation**: With our easy-to-use Jump-Bar, you can leap to the scripts you need by alphabetical order. No more endless scrolling! 🚀
-- **Alphabetized Sections with Easy Navigation**: Every section is alphabetically organized with a "Back to Top" link at the end.
-- **Comprehensive Usage Guides**: Each NSE script includes the appropriate commands, ports, and essential usage hints.
-- **Coverage**: We’ve got everything from **discovery scripts** to **vulnerability scanning gems** and **brute-force tools.**
+## Usage Examples
+- To scan a target with the http-enum script:
+  ```bash
+  nmap --script http-enum <target>
+  ```
 
----
+- To scan for SMB vulnerabilities:
+  ```bash
+  nmap --script smb-vuln-ms17-010 <target>
+  ```
 
-## 💡 Pro Tip:
-> Use `Ctrl + F` (or `Cmd + F` on Mac) to search for a specific service or script, like `http` or `ssh`. This is the fastest way to locate exactly what you need for a given audit or test! 🔍
-
----
-
-## 🎯 Who Is This For?
-If you’re a:
-- **Pentester** looking to streamline your audits
-- **Network Engineer** aiming to secure services
-- **Enthusiast or Student** learning about Nmap and NSE’s vast toolset
-
-This repository is built to save you time and increase productivity.
-
----
-
-## 📚 Contents
-- **How to Use**: Learn how to run and customize Nmap commands.
-- **Tips & Best Practices**: From enabling `-sV` for better results to customizing brute-force arguments.
-- **Script Library**: Every script is detailed with its typical use case.
-
----
-
-## 📜 License
-This cheat sheet is open-source under the MIT license. Contributions, suggestions, and improvements are always welcome!
-
----
-
-Ready to get started? Dive into the cheat sheet and supercharge your Nmap scans today!
-
----
-
-[Jump to the Cheat Sheet](./cheat-sheet.md)
+## Conclusion
+This cheat sheet is continually updated, so please check back for the latest scripts and usage examples.
